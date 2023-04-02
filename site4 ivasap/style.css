@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url("staff.jpg")center/cover;
+    position: relative;
+    overflow: hidden;
+}
+.logob{
+    width: 725px;
+    height: 770px;
+    position: absolute;
+    top: -60px;
+    right: -290px;
+    color: aqua;
+}
+.grand {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(12, 6, 129, 0.19), rgba(0, 98, 255, 0.19));
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.menu a {
+    display: flex;
+    padding-right: 80px;
+    padding-left: 20px;
+    height: 5vh;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buton a {
+    padding: 20px;
+}
+
+.buton {
+    border-radius: 30px;
+    border: 3px solid white;
+}
+
+.logo img {
+    margin-left: 50px;
+    width: 140px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+}
+
+.main2 {
+    top: 545px;
+    position: absolute;
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    margin-left: 100px;
+    font-size: 25px;
+}
+
+.title button {
+    width: 90px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(2, 210, 200);
+    background-color: rgb(2, 210, 200);
+}
+
+.titlep1 {
+    position: absolute;
+    top: -30px;
+    color: aqua;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.titlep2 {
+    position: absolute;
+    font-size: 15px;
+    top: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+}
+
+.bb {
+    position: absolute;
+    top: 430px;
+    left: 80px;
+    display: flex;
+    gap: 10px;
+}
+
+.cards {
+    display: flex;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+
+}
+.scroll {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    top: 470px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;  
+}
+.abc {
+    position:absolute;
+    top: -50px;
+}
+
+.btn-primary {
+    border-radius: 30px;
+    width: 110px;
+    background-color: rgb(3, 221, 210);
+    border: 0;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: rgb(0, 134, 128);
+    color: rgb(255, 255, 255);
+}
+
+.main3 {
+    width: 99.9%;
+    height: 150vh;
+    background: url("img.jpg")center/cover;
+    margin-top: 400px;
+    display: grid;
+    grid-template-columns: repeat(50, 2%);
+    grid-template-rows: repeat(50, 2%);
+}
+
+.grands {
+    grid-column: 1/51;
+    grid-row: 1/51;
+    background-image: linear-gradient(to right, rgba(6, 3, 71, 0.416), rgba(12, 45, 95, 0.27));
+}
+
+.crd {
+    grid-column: 30/45;
+    grid-row: 20
+}
+
+.bt {
+    width: 130px;
+    height: 15px;
+    background-color: aqua;
+    border-radius: 30px;
+    border: 0;
+    grid-column: 30/45;
+    grid-row: 26
+}
+
+.main3 .p {
+    width: 380px;
+    grid-column: 30/50;
+    grid-row: 28;
+}
+
+.main3 .pp {
+    grid-column: 30/50;
+    grid-row: 37;
+    font-weight: bold;
+    color: rgb(0, 184, 184);
+}
+
+.main4 {
+    position: absolute;
+    top: 2050px;
+    margin-left: 0;
+}
+
+.main4-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 250px;
+}
+
+.main5 {
+    width: 99.9%;
+    height: 110vh;
+    background: url("image.jpg")center/cover;
+    margin-top: 400px;
+    display: grid;
+    grid-template-columns: repeat(50, 2%);
+    grid-template-rows: repeat(50, 2%);
+
+}
+
+.gradss {
+    grid-column: 1/51;
+    grid-row: 1/51;
+    background-image: linear-gradient(to right, rgba(10, 5, 104, 0.19), rgba(0, 98, 255, 0.19));
+}
+
+.iphone {
+    grid-column: 5/5;
+    grid-row: 13/14;
+
+}
+
+.main5p {
+    grid-column: 29/35;
+    grid-row: 17/19;
+    color: rgb(31, 114, 114);
+    font-weight: bold;
+}
+
+.main5 h1 {
+    grid-column: 29/45;
+    grid-row: 19/25;
+    color: white;
+    font-size: 3rem;
+    font-weight: 350;
+}
+
+.btnnn {
+    grid-column: 29/33;
+    grid-row: 23/23;
+    border: 0;
+    border-radius: 20px;
+    background-color:aqua;
+}
+
+.main5 p {
+    grid-column: 29/47;
+    grid-row: 25/26;
+}
+
+.main5 h5 {
+    grid-column: 29/43;
+    grid-row: 35/36;
+    color: rgb(31, 114, 114);
+    letter-spacing: 2px;
+}
+
+.footer {
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.navbarr {
+    display: flex;
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    align-items: center;
+    justify-content: start;
+}
+
+.menuu {
+    display: flex;
+}
+
+.menuu a {
+    display: flex;
+    padding-right: 80px;
+    padding-left: 20px;
+    height: 5vh;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.butonn a {
+    padding: 20px;
+    color: rgb(54, 210, 210);
+}
+
+.butonn {
+    border-radius: 30px;
+    border: 3px solid rgb(54, 210, 210);
+}
+
+.footertit {
+    position: absolute;
+    bottom: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    font-size: 0.9rem;
+}
+.icons i {
+    width: 50px;
+    font-size: 20px;
+}
+
+@media(min-width:0) and (max-width:57px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+    }
+}

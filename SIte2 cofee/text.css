@@ -1,0 +1,319 @@
+    @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Island+Moments&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,400;0,500;0,800;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Island+Moments&family=Open+Sans:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;0,800;1,600;1,700&display=swap'); 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1190px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-image: url("cofee image/img.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0;
+}
+.navbar-logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 5px solid black;
+    border-radius: 15px;
+}
+ul {
+    display: flex;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 25px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    
+}
+
+li:first-child {
+    margin-right: 80px;
+}
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header-text h1 {
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: #704f3e;
+    line-height: 0.5;
+}
+.header-text h1::first-letter {
+    font-size: 11rem;
+}
+.header-text h3 {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1.5px;
+}
+.button-coffee {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    background-color: #745b37;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 30px 0px  30px  0px ;
+    margin-top: 15px;
+    
+}
+
+/* ABOUT */
+.about {
+    margin-bottom: 60px;
+}
+.about-title {
+    margin: 60px 0;
+
+}
+.about-title h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #5b2a02;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.about-title h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #5b2a02;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+.about-img{
+    width: 40%;
+} 
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-text {
+    width: 40%;
+}
+h4{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 50px;
+    color:#745b37;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    letter-spacing: 0.5rem;
+}
+
+#asteriks{
+    color: #745b37;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.about-text p {
+    font-size: 15px;
+    text-align: center;
+
+}
+
+/* Portfolio */
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-item {
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+}
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+    
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #5a2a02;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0.5;
+    color: #b3a49b;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+}
+.portfolio-item:hover .overlay{
+    top: 0;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact */
+
+.contact{
+    background-color: #c18a6f;
+    padding: 10px 0;
+}
+.contact h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #391a01;
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact h2::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #391a01;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-content{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-basis: 33%;
+    flex-direction: column;
+}
+
+.contact-item i {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #341800;
+
+}
+.contact-item p {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+/* Footer */
+
+.footer h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 50px 0;
+}
+.footer h2::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+.footer {
+    background-color: #000000;
+
+}
+.footer-copytight p {
+    color: white;
+    text-align: center;
+    flex-basis: 55%;
+    line-height: 2;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-social i {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 50px;
+    padding: 0 40px;
+    margin-left: 40px;
+}
+@media only screen and (max-width:990px) {
+    .about-img{
+        width: 100%;
+        margin-bottom: 30px;
+        
+    }
+
+    .about-text{
+        width: 100%;
+    }
+ 
+}
+@media only screen and (max-width:990px) {
+    
+    .portfolio-item {
+        
+        flex-basis: 50%;
+
+    }
+    .portfolio {
+        width: 100%;
+    }
+}

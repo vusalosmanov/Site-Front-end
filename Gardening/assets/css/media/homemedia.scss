@@ -1,0 +1,626 @@
+
+@media only screen and (min-width: 576px) and (max-width: 1070px) { 
+    @mixin container {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header{
+         // hamburger
+         .top-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00BAF0;
+            background: white;
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #FFF;
+            height: 50px;
+            padding: 1em;
+          }
+          
+          .menu {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .menu > li {
+            margin: 0 1rem;
+            overflow: hidden;
+          }
+          
+          .menu-button-container {
+            display: none;
+            height: 100%;
+            width: 30px;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          #menu-toggle {
+            display: none;
+          }
+          
+          .menu-button,
+          .menu-button::before,
+          .menu-button::after {
+            display: block;
+            background-color: black;
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 2px;
+          }
+          
+          .menu-button::before {
+            content: '';
+            margin-top: -8px;
+          }
+          
+          .menu-button::after {
+            content: '';
+            margin-top: 8px;
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button {
+            background: rgba(255, 255, 255, 0);
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+          }
+          
+          @media (max-width: 1070px) {
+            .menu-button-container {
+              display: flex;
+            }
+            .menu {
+              position: absolute;
+              top: 0;
+              margin-top: 50px;
+              left: 0;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+            }
+            #menu-toggle ~ .menu li {
+              height: 0;
+              margin: 0;
+              padding: 0;
+              border: 0;
+              transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            #menu-toggle:checked ~ .menu li {
+              border: 1px solid #333;
+              height: 2.5em;
+              padding: 0.5em;
+              transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .menu > li  {
+              display: flex;
+              justify-content: center;
+              margin: 0;
+              padding: 0.5em 0;
+              width: 100%;
+              color: white !important;
+              background-color: #222;
+              z-index: 100;
+            }
+           
+            .menu > li:not(:last-child) {
+              border-bottom: 1px solid #444;
+            }
+          }
+
+        //   HAMBURGER
+   .header_top{
+   display: none;
+   }
+   .header_bottom{
+    display: none;
+   }
+   
+}
+
+.main_intro{
+    padding: 120px 70px;
+  .introduction{
+    padding: 0;
+    h1{
+      text-align: center;
+      font-size: 50px;
+  }
+  p{
+      text-align: center
+  }
+  }
+}
+
+.main_service_list{
+    .container{
+        @include container;
+        .service_list{
+            display: flex;
+            justify-content: space-evenly ;
+        }
+    }
+}
+
+
+.company_history{
+    .container{
+        @include container;
+        flex-direction: column;
+        .company_history_left{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        .company_history_right{
+            padding: 0;
+            width: 100%;
+            .right_img{
+                width: 500px;
+                padding-top: 55px;
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+
+.feature_projects_main{
+    .container{
+        padding: 0 20px;
+        .feature_projects_cards{
+            .feature_projects_card{
+                .overlay{
+                    .project_content{
+                        padding: 38px 30px;
+                        h3{
+                            margin-bottom: 30px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.commitments_main{
+    display: flex;
+    flex-wrap: wrap;
+
+    .commitments_img{
+        width: 40%;
+        img{
+
+        }
+    }
+.commitments_text{
+    width: 60%;
+    .commitment_text_top{
+        h3{
+
+        }
+        p{
+
+        }
+    }
+}
+
+.commitments_quote{
+    width: 100%;
+    .commitments_quote_top{
+        padding: 50px 90px;
+        input{
+            width: 100%;
+        }
+    }
+}
+}
+
+
+.main_footer{
+    .container{
+        @include container;
+        padding: 0;
+        .in_footer{
+            display: flex;
+            flex-wrap: wrap;
+            .logo_and{
+                width: 50%;
+                margin: 0 0 30px 0;
+            }
+            .services{
+                margin-bottom: 30px;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    margin-right: 40px;
+                }
+            }
+
+            .contact_us{
+                padding-right: 40px;
+            }
+
+           
+    }
+
+    .copyright{
+        padding-bottom: 30px;
+    }
+}
+}
+
+}
+
+// --------TELEPHONE MEDIA-------------
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+    header{
+
+        // hamburger
+        .top-nav {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00BAF0;
+            background: white;
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: #FFF;
+            height: 50px;
+            padding: 1em;
+          }
+          
+          .menu {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .menu > li {
+            margin: 0 1rem;
+            overflow: hidden;
+          }
+          
+          .menu-button-container {
+            display: none;
+            height: 100%;
+            width: 30px;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          #menu-toggle {
+            display: none;
+          }
+          
+          .menu-button,
+          .menu-button::before,
+          .menu-button::after {
+            display: block;
+            background-color: black;
+            position: absolute;
+            height: 4px;
+            width: 30px;
+            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            border-radius: 2px;
+          }
+          
+          .menu-button::before {
+            content: '';
+            margin-top: -8px;
+          }
+          
+          .menu-button::after {
+            content: '';
+            margin-top: 8px;
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button {
+            background: rgba(255, 255, 255, 0);
+          }
+          
+          #menu-toggle:checked + .menu-button-container .menu-button::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+          }
+          
+          @media (max-width: 700px) {
+            .menu-button-container {
+              display: flex;
+            }
+            .menu {
+              position: absolute;
+              top: 0;
+              margin-top: 50px;
+              left: 0;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+            }
+            #menu-toggle ~ .menu li {
+              height: 0;
+              margin: 0;
+              padding: 0;
+              border: 0;
+              transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            #menu-toggle:checked ~ .menu li {
+              border: 1px solid #333;
+              height: 2.5em;
+              padding: 0.5em;
+              transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .menu > li {
+              display: flex;
+              justify-content: center;
+              margin: 0;
+              padding: 0.5em 0;
+              width: 100%;
+              color: white;
+              background-color: #222;
+              z-index: 100;
+            }
+            .menu > li:not(:last-child) {
+              border-bottom: 1px solid #444;
+            }
+          }
+
+        //   HAMBURGER END
+
+
+        .header_top{
+            display: none;
+            
+         .container{
+         }
+        }
+        .header_bottom{
+            display: none;
+        }
+         .header_bottom_right{
+             display: none;
+           
+         }
+     }
+
+
+    //  INTRODUCTION MEDIA START
+.main_intro{
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+.introduction{
+h1{
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+p{
+  font-size: 21px;
+  margin-bottom: 43px;
+  text-align: center;
+}
+}
+}
+    //  INTRODUCTION MEDIA END
+
+// SERVICE LIST MEDIA START
+.container{
+  .service_list{
+    .list_items{
+      width: 100%;
+    }
+  }
+  .check_out{
+    p{
+      text-align: center;
+      padding: 0 20px;
+    }
+  }
+}
+// SERVICE LIST MEDIA END
+
+
+
+// HISTORY MEDIA START
+     .company_history{
+      padding: 30px 20px 0 20px;
+        .container{
+            flex-direction: column;
+            .company_history_left{
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                .left_writing{
+                  h2{
+                    font-size: 26px;
+                    margin-bottom: 22px;
+                  }
+                  p{
+                    font-size: 17px;
+                    margin-bottom: 15px;
+                  }
+                }
+                .left_img{
+                    width: 200px;
+                    height: 300px;
+                    img{
+                        width: 300px;
+                    }
+                }
+            }
+            .company_history_right{
+                padding: 0;
+                width: 100%;
+                .right_img{
+                    padding-top: 55px;
+                    img{
+                        width: 300px;
+                        object-fit: cover;
+                    }
+                }
+                .right_writing{
+                  h2{
+                    font-size: 26px;
+                    margin-bottom: 22px;
+                  }
+                  p{
+                    font-size: 17px;
+                    margin-bottom: 22px;
+                  }
+                  .hst_p2{
+                    margin-bottom: 40px;
+                  }
+                }
+            }
+        }
+    }
+
+// HISTORY MEDIA END
+
+// PREFER MEDIA MEDIA END
+    .prefer_main{
+        display: flex;
+        flex-wrap: wrap;
+        
+            .prefer{
+                width: 100%;
+                .prefer_writing{
+                  p{
+                    font-size: 17px;
+                  }
+                }
+            }
+        
+    }
+// PREFER MEDIA MEDIA END
+
+
+// FEATURE PROJECTS  MEDIA MEDIA START
+   .feature_projects_main{
+    padding: 30px 0;
+    .container{
+        .feature_projects_writing{
+          h2{
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
+        }
+        .feature_projects_cards{
+            display: flex;
+            flex-wrap: wrap;
+            .feature_projects_card{
+              background-repeat: no-repeat;
+              background-size: cover;
+                width: 100%;
+            }
+        }
+    }
+   }
+   // FEATURE PROJECTS MEDIA MEDIA END
+   
+ // OUR COMMITMENTS MEDIA START
+   .commitments_main{
+    display: flex;
+    flex-wrap: wrap;
+    .commitments_text{
+      .commitment_text_top{
+        
+    padding: 40px 40px 40px 50px;
+        h3{
+          font-size: 27px;
+          margin-bottom: 35px;
+        }
+        p{
+          font-size: 18px;
+        }
+      }
+    }
+    .commitments_img{
+        display: none;
+    }
+    .commitments_text{
+        width: 100%;
+    }
+    .commitments_quote{
+        width: 100%;
+        .commitments_quote_top{
+          padding: 60px 20px;
+          h2{
+            font-size: 29px;
+          }
+        }
+    }
+   }
+ // OUR COMMITMENTS MEDIA MEDIA END
+
+
+
+   .main_footer{
+    padding: 70px 20px;
+    .container{
+        .in_footer{
+            display: flex;
+            flex-wrap: wrap;
+            .logo_and{
+                width: 100%;
+            }
+            .services{
+                width: 100%;
+            }
+            .navigation{
+                width: 100%;
+            }
+            .contact_us{
+                width: 100%;
+            }
+        }
+    }
+   }
+}
+
+
